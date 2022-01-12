@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+/*** Color Palette ***/
+/*** Reset ***/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*** Fonts ***/
+html {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/*** Globals ***/
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*** BODY ***/
+body {
+  background: linear-gradient(135deg, white 0%, #fff5f5 100%);
+}
+
+p,
+span,
+input {
+  color: #ce9797;
+}
+
+.container {
+  width: 90%;
+  margin: 1em auto;
+  max-width: 450px;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+}
+
+.heading {
+  text-align: center;
+}
+
+.heading h1 {
+  font-size: 3em;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: #413a3a;
+  margin-bottom: 1rem;
+}
+
+.heading h1 span {
+  font-weight: 300;
+  display: block;
+}
+
+.heading p {
+  margin-bottom: 2rem;
+}
+
+form {
+  position: relative;
+  margin: 0 auto;
+}
+
+form .email {
+  border: 1px solid #ce9797;
+  outline: none;
+  padding: 1em 1.5em;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+form .btn {
+  background: linear-gradient(135deg, #f8bfbf 0%, #ee8c8c 100%);
+  padding: 0.7rem 1.5rem;
+  border: none;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+form .btn:hover {
+  cursor: pointer;
+}
+
+form .btn:active {
+  background: #ce9797;
+}
+
+form .error::before {
+  content: "!";
+  display: block;
+  position: absolute;
+  background-color: #f96262;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50%;
+  top: 0.5rem;
+  left: -50px;
+}
+
+form .c-valid {
+  color: #f96262;
+  text-align: left;
+  margin-left: 1.5em;
+}
+
+/*** Sliders ***/
+.email,
+button {
+  border-radius: 2em;
+}
+
+.hero img,
+.heading {
+  margin-bottom: 3em;
+}
+
+/*** Footer ***/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/*** 8.0 - MediaQuery ***/
+/* For tablets: */
+/* For desktop: */
+@media only screen and (min-width: 768px) {
+  .coming-soon {
+    background-image: url(../images/bg-pattern-desktop.svg);
+    max-width: 1440px;
+    margin: 0 auto;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr auto;
+        grid-template-columns: 1fr auto;
+        grid-template-areas: "logo hero" "heading hero";
+  }
+  .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: logo;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .heading {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: heading;
+    text-align: left;
+  }
+  .heading h1 {
+    font-size: 4rem;
+  }
+  .hero {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 2;
+    grid-area: hero;
+  }
+  .hero img {
+    margin: 0;
+    height: 100%;
+  }
+  .btn {
+    width: 5rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
